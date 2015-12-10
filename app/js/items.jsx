@@ -1,62 +1,22 @@
 import React from 'react';
 
 
-
 var Items = React.createClass({
-  // ??
-  // getDefaultProps(){
-  //   return {
-  //     value: 'default value'
-  //   };
-  // },
-  getInitialState(){
-    let currentTemp = 10;
-    return {
-      currentTemp : currentTemp
-    };
-  },
-  setTemperature(e){
-    this.setState({ currentTemp: e.target.value });
-  },
-  render(){
-    let stateOfMatter;
-    if (this.state.currentTemp <= this.props.config.boiling) {
-      stateOfMatter = 'Liquid';
-    } else {
-      stateOfMatter = 'Boiling';
+    render(){
+      return (
+        <div className={ this.props.config }>
+          <h1 className="bold-700">{ this.props.config }</h1>
+          <h2 className="bold-700">Siroop</h2>
+          <p className="thin-100">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+          <p className="light-300">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+          <p className="normal-400">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+          <small className="light-300 uppercase spacing">An uppercase, spaced title</small>
+          <p className="medium-500">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+          <p className="bold-700">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+          <p className="ultra-bold-900">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      )
     }
-    return (
-      <div>
-        <input type="text" onChange={ this.setTemperature } value={ this.state.currentTemp }/>
-        <p>{ this.props.config.name } - { this.state.currentTemp }°C : State = "{ stateOfMatter }"</p>
-      </div>
-    )
-  }
 });
 
-
-
 module.exports = Items;
-
-
-//
-// module.exports = React.createClass({
-//   getInitialState(){
-//     return {
-//       initialItems: [
-//         "eins",
-//         "zwei",
-//         "drei"
-//       ]
-//     }
-//   },
-//   render(){
-//     return (
-//       <ul>{
-//         this.state.initialItems.map(function(item) {
-//           return <li key={item}>{item}</li>
-//         })}
-//       </ul>
-//     )
-//   }
-// });
