@@ -13,4 +13,4 @@ $ npm install
 ```bash
 $ npm run dev
 ```
-now go to localhost:8080
+---> localhost:8080
