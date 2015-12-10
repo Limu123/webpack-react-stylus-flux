@@ -2,10 +2,10 @@
 import './app.styl';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoList from './js/todolist.jsx';
+import List from './js/list.jsx';
 
 render();
 
 function render (){
-  ReactDOM.render(<TodoList />, document.getElementById('todolist'));
+  ReactDOM.render(<List />, document.getElementById('list'));
 }
