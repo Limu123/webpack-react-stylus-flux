@@ -9,7 +9,8 @@ $ npm install
 ```
 (you might have to install webpack and react globaly)
 
-### Build
+### Run
 ```bash
 $ npm run dev
 ```
+now go to localhost:8080
