@@ -6,9 +6,9 @@ var List = React.createClass({
   getInitialState(){
     return {
       columns:4,
-      fontSize:1,
+      fontSize:2,
       columnsSelector: 'columns-4',
-      fontSizeSelector: 'font-size-1',
+      fontSizeSelector: 'font-size-2',
       type: [ 'maison','roboto','roboto-condensed', 'roboto-slab']
     }
   },

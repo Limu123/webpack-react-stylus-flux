@@ -35,6 +35,10 @@ var config = {
     {
       test: /\.(png|jpg)$/, // images
       loader: 'url?limit=25000'
+    },
+    {
+      test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, // fonts
+      loader : 'file-loader'
     }]
   },
 }

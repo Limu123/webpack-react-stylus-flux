@@ -8,6 +8,7 @@ $ cd webpack-react-stylus-flux/
 $ npm install
 ```
 (you might have to install webpack and react globaly)
+The fonts aren't committed intentionally. Create a folder 'app/font' and place them there.
 
 ### Run
 ```bash

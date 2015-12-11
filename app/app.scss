@@ -1,4 +1,6 @@
 
+@import 'font';
+
 $bg-color: #eee;
 $container-color: #fff;
 
@@ -30,12 +32,12 @@ body {
   &.columns-3 {
     & > div:nth-child(4){ display: none; }
   }
-  &.font-size-1 { #list & { font-size: 0.8rem; }}
-  &.font-size-2 { #list & { font-size: 1.1rem; }}
+  &.font-size-1 { #list & { font-size: 0.7rem; }}
+  &.font-size-2 { #list & { font-size: 1rem; }}
   &.font-size-3 { #list & { font-size: 1.4rem; }}
   &.font-size-4 { #list & { font-size: 1.8rem; }}
-  &.font-size-5 { #list & { font-size: 2.1rem; }}
-  &.font-size-6 { #list & { font-size: 2.6rem; }}
+  &.font-size-5 { #list & { font-size: 2.2rem; }}
+  &.font-size-6 { #list & { font-size: 2.8rem; }}
 }
 
 
