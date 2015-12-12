@@ -7,18 +7,21 @@ $container-color: #fff;
 
 body {
   background: $bg-color;
+  box-sizing: border-box;
+  font-family: 'Roboto';
 }
 
 #inner-wrap {
   display:flex;
   flex-flow: row wrap;
+  padding: 5rem 0 2rem;
   background: $bg-color;
-  padding: 0 0 2rem;
   > div {
     flex:1;
     background:$container-color;
     margin: 0.2rem;
     padding: 0.5rem;
+    overflow: hidden;
   }
   &.columns-1 {
     & > div:nth-child(2){ display: none; }
@@ -32,13 +35,27 @@ body {
   &.columns-3 {
     & > div:nth-child(4){ display: none; }
   }
-  &.font-size-1 { #list & { font-size: 0.7rem; }}
-  &.font-size-2 { #list & { font-size: 1rem; }}
-  &.font-size-3 { #list & { font-size: 1.4rem; }}
-  &.font-size-4 { #list & { font-size: 1.8rem; }}
-  &.font-size-5 { #list & { font-size: 2.2rem; }}
-  &.font-size-6 { #list & { font-size: 2.8rem; }}
 }
+
+#nav {
+  display:flex;
+  position: fixed;
+  width: 98%;
+  top:0;
+  padding: 0.5rem 0.2rem;
+  background: $bg-color;
+  button {
+    cursor:pointer;
+    font-size: 0.8rem;
+  }
+  span {
+    flex: 2;
+    line-height: 2rem;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
 
 
 
@@ -80,4 +97,35 @@ body {
 }
 .spacing {
   letter-spacing: 0.1em;
+}
+
+
+
+/* slider */
+.slider {
+  width: 50%;
+  max-width: 500px;
+  height: 30px;
+  background: $container-color;
+}
+.handle {
+  background-color: black;
+  cursor: pointer;
+  &.active {
+    background-color: darken($bg-color,30%);
+  }
+}
+.bar {
+  position: relative;
+  background-color: darken($bg-color,10%);
+}
+.slider {
+  .bar {
+    top: 13px;
+    height: 4px;
+  }
+  .handle {
+    width: 40px;
+    height: 30px;
+  }
 }

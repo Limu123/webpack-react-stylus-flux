@@ -1,5 +1,6 @@
 import Items from './items.jsx';
 import React from 'react';
+import ReactSlider from 'react-slider';
 
 
 var List = React.createClass({
@@ -8,17 +9,13 @@ var List = React.createClass({
       columns:4,
       fontSize:2,
       columnsSelector: 'columns-4',
-      fontSizeSelector: 'font-size-2',
       type: [ 'maison','roboto','roboto-condensed', 'roboto-slab']
     }
   },
   setFontsize(){
-    let tempFontsize, tempSelector;
-    if (this.state.fontSize === 6){ tempFontsize = 1; } else { tempFontsize = this.state.fontSize + 1; }
-    tempSelector = 'font-size-' + tempFontsize;
-    this.setState({
-      fontSize : tempFontsize,
-      fontSizeSelector : tempSelector
+    document.getElementById('inner-wrap').style.fontSize = event.target.style.left;
+    this.setState ({
+      fontSize : event.target.style.left
     });
   },
   setColumns(){
@@ -34,7 +31,8 @@ var List = React.createClass({
     return (
       <div id="list-inner">
         <nav id="nav">
-          <button onClick={this.setFontsize}>setFontsize </button>
+          <ReactSlider defaultValue={this.state.value} onChange={this.setFontsize} withBars />
+          <span>font-size: {this.state.fontSize}</span>
           <button onClick={this.setColumns}>setColumns </button>
         </nav>
         <div id="inner-wrap" className={this.state.columnsSelector + " " + this.state.fontSizeSelector}>
