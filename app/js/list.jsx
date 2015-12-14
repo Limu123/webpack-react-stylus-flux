@@ -7,15 +7,15 @@ var List = React.createClass({
   getInitialState(){
     return {
       columns:4,
-      fontSize:2,
+      fontSize:"16px",
       columnsSelector: 'columns-4',
       type: [ 'maison','roboto','roboto-condensed', 'roboto-slab']
     }
   },
   setFontsize(){
-    document.getElementById('inner-wrap').style.fontSize = event.target.style.left;
+    document.getElementById('inner-wrap').style.fontSize = parseInt(event.target.style.left)+"px";
     this.setState ({
-      fontSize : event.target.style.left
+      fontSize : parseInt(event.target.style.left) + "px"
     });
   },
   setColumns(){
