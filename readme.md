@@ -3,7 +3,7 @@
 
 ### Installation
 ```bash
-$ git clone https://github.com/Limu123/webpack-react-stylus-flux.git
+$ git clone this repo
 $ cd webpack-react-stylus-flux/
 $ npm install
 ```
