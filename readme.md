@@ -15,3 +15,4 @@ The fonts aren't committed intentionally. Create a folder 'app/font' and place t
 $ npm run dev
 ```
 ---> localhost:8080
+
